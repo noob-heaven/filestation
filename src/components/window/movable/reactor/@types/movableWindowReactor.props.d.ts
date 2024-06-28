@@ -1,4 +1,4 @@
-import type { IWindowPosition } from '@src/common/@types/window.position';
+import type { IWindowPosition } from '@src/common/@types/window';
 
 export interface IMovableWindowReactorProps {
   clientPosition: IWindowPosition,

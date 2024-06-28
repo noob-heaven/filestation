@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 
-import type { IWindowPosition } from '@types/window.position';
+import { IWindowSize, type IWindowPosition } from '@src/common/@types/window';
 import { debug } from '@common/utils/debug';
 import MovableWindowContainer from '@components/window/movable/container/MovableWindowContainer';
 
@@ -11,24 +11,27 @@ import styles from './movableWindowReactor.module.css';
 export default function MovableWindowReactor() {
 
   let [isSelected, setSelected] = useState<boolean>(false);
-  let [position, setPosition] = useState<IWindowPosition>({ left: 0, top: 0 });
-
-  useEffect(() => {
-    debug('Position updated:', position);
-  }, [position]);
-
-  useEffect(() => {
-    debug('Selected updated:', isSelected);
-  }, [isSelected]);
+  let [isScalable, setScalable] = useState<boolean>(false);
+  let [position, setPosition] = useState<IWindowPosition>({ left: window.innerWidth / 2, top: window.innerHeight / 2 });
+  let [size, setSize] = useState<IWindowSize>({ width: 100, height: 100 });
 
   const onWindowMouseMove = (e: React.MouseEvent) => {
     if (!isSelected) return;
     const { movementX, movementY } = e;
     console.log(movementX, movementY);
-    setPosition((prev) => ({
-      left: prev.left + movementX,
-      top: prev.top + movementY,
-    }));
+
+    if (isScalable) {
+      setSize((prev) => ({
+        width: prev.width + movementX,
+        height: prev.height + movementY,
+      }));
+    } else if (isSelected) {
+      setPosition((prev) => ({
+        left: prev.left + movementX,
+        top: prev.top + movementY,
+      }));
+    }
+
   };
 
   return (
@@ -37,10 +40,16 @@ export default function MovableWindowReactor() {
       onMouseMoveCapture={onWindowMouseMove}
       onMouseUp={() => setSelected(false)}
     >
+
       <MovableWindowContainer
         isSelected={isSelected}
         setSelected={setSelected}
+
+        isScalable={isScalable}
+        setScalable={setScalable}
+
         position={position}
+        size={size}
       />
     </div>
   );
