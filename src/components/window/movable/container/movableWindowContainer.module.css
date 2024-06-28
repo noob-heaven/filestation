@@ -1,0 +1,16 @@
+
+.movableWindowContainer {
+  position: absolute;
+  z-index: 1000;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 6.25rem;
+  height: 6.25rem;
+}
+
+/* On Hover, Cursor -> Move */
+.movableWIndowContainer:hover {
+  cursor: move;
+}
