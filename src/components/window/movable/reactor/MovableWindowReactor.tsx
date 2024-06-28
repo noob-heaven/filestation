@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 
-import { IWindowSize, type IWindowPosition } from '@src/common/@types/window';
+import type { IWindowSize, IWindowPosition } from '@types/window';
 import MovableWindowContainer from '@components/window/movable/container/MovableWindowContainer';
 import {
   RESTRICT_HEIGHT_MAX,
@@ -15,6 +15,11 @@ import {
   RESTRICT_WIDTH_MIN,
 } from '@constants/movableRestrict.constants';
 
+import {
+  INITIAL_WINDOW_HEIGHT,
+  INITIAL_WINDOW_WIDTH,
+} from '@constants/common.constants';
+
 import { MovableWindowAction } from '../container/@types/movableWindow.props';
 import styles from './movableWindowReactor.module.css';
 
@@ -26,13 +31,16 @@ export default function MovableWindowReactor() {
   let [isSelected, setSelected] = useState<boolean>(false);
   let [isScalable, setScalable] = useState<boolean>(false);
   let [position, setPosition] = useState<IWindowPosition>({ left: 200, top: 200 });
-  let [size, setSize] = useState<IWindowSize>({ width: 100, height: 100 });
+  let [size, setSize] = useState<IWindowSize>({ width: INITIAL_WINDOW_WIDTH, height: INITIAL_WINDOW_HEIGHT });
   let [currentAction, setCurrentAction] = useState<MovableWindowAction>('none');
 
   // NOTE: On Window Mounted -> reset Pos!
   useEffect(() => {
     setInitialized(true);
-    setPosition({ left: window.innerHeight / 2, top: window.innerHeight / 2 });
+    setPosition({
+      left: (window.innerHeight / 2),
+      top: (window.innerHeight / 2) - (size.height / 2),
+    });
   }, []);
 
   const onWindowMouseMove = (e: React.MouseEvent) => {
