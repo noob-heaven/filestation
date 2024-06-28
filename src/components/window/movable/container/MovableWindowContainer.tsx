@@ -6,6 +6,7 @@ import MovableWindowTitle from '../title/MovableWindowTitle';
 
 import styles from './movableWindowContainer.module.css';
 import { debug } from '@common/utils/debug';
+import MovableWindowBody from '../body/MovableWindowBody';
 
 const temporaryTitle = 'Temporary Title';
 
@@ -51,7 +52,7 @@ export default function MovableWindowContainer({
       )
     );
     setScalable(isColliding);
-};
+  };
 
 
   return (
@@ -73,7 +74,7 @@ export default function MovableWindowContainer({
     >
       <div className={styles.innerContainer}>
         <MovableWindowTitle title={temporaryTitle} />
-        Draggable Window
+        <MovableWindowBody />
       </div>
     </div>
   );
