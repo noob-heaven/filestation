@@ -2,9 +2,13 @@ import React, { useEffect, useState } from 'react';
 import type { IMovableWindowProps } from './@types/movableWindow.props';
 
 import TRICKY_CONSTANT from '@constants/tricky.constant';
+import MovableWindowTitle from '../title/MovableWindowTitle';
 
 import styles from './movableWindowContainer.module.css';
 import { debug } from '@common/utils/debug';
+import MovableWindowBody from '../body/MovableWindowBody';
+
+const temporaryTitle = 'Temporary Title';
 
 export default function MovableWindowContainer({
   currentAction,
@@ -34,6 +38,8 @@ export default function MovableWindowContainer({
   * @description Scaling
   */
   const actionWhenMouseOnBoundary = (e: React.MouseEvent) => {
+    if (currentAction !== 'none' && currentAction !== 'scale') return;
+
     const boundary = containerRef.current!.getBoundingClientRect();
     // HACK: 왼쪽 / 오른쪽 / 위 / 아래 4px 이내로 마우스가 들어오는경우, gap 을 두어 느린 랜더링을 방지.
     const gap = currentAction === 'scale' ? TRICKY_CONSTANT.TRICKY_COLLISION_SCALING_GAP : TRICKY_CONSTANT.TRICKY_COLLISION_NORMAL_GAP;
@@ -46,14 +52,14 @@ export default function MovableWindowContainer({
       )
     );
     setScalable(isColliding);
-};
+  };
 
 
   return (
     <div
       id="movableWindowContainer"
       ref={containerRef}
-      className={`${styles.movableWindowContainer} unselectable`}
+      className={`${styles.movableWindowContainer} G-unselectable`}
       onMouseDown={() => setSelected(true)}
       onMouseUp={() => setSelected(false)}
       onMouseMove={actionWhenMouseOnBoundary}
@@ -66,7 +72,10 @@ export default function MovableWindowContainer({
         cursor: isScalable ? 'nwse-resize' : 'move',
       }}
     >
-      Draggable Window
+      <div className={styles.innerContainer}>
+        <MovableWindowTitle title={temporaryTitle} />
+        <MovableWindowBody />
+      </div>
     </div>
   );
 }

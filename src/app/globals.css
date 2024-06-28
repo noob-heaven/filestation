@@ -113,7 +113,7 @@ a {
 
 /* NOTE: Unselectable */
 
-.unselectable {
+.G-unselectable {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -122,7 +122,7 @@ a {
   user-select: none;
 }
 
-.unselectable * {
+.G-unselectable * {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
