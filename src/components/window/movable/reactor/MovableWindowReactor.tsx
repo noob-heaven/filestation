@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 
-import type { IWindowSize, IWindowPosition } from '@types/window';
+import type { IWindowSize, IWindowPosition } from '$types/window';
 import MovableWindowContainer from '@components/window/movable/container/MovableWindowContainer';
 import {
   RESTRICT_HEIGHT_MAX,
