@@ -18,6 +18,14 @@
       }
     ],
     "paths": {
+      "$types/*": ["./src/common/@types/*"],
+      "@app/*": ["./src/app/*"],
+      "@lib/*": ["./src/lib/*"],
+      "@components/*": ["./src/components/*"],
+      "@containers/*": ["./src/containers/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@constants/*": ["./src/constants/*"],
+      "@common/*": ["./src/common/*"],
       "@src/*": ["./src/*"]
     }
   },

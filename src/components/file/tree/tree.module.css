@@ -1,0 +1,26 @@
+.rootLi {
+  display: table;
+  width: 100%;
+  line-height: 28px;
+  height: 28px;
+  overflow: hidden;
+}
+
+.terminalLi {
+  display: table;
+  width: 100%;
+  line-height: 28px;
+  height: 28px;
+  overflow: hidden;
+}
+.terminalLi li {
+  content: " ";
+}
+
+.nonTerminalLi {
+  display: table;
+  width: 100%;
+  line-height: 28px;
+  height: 28px;
+  overflow: hidden;
+}

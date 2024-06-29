@@ -1,0 +1,33 @@
+.bodyContainer {
+  width: 100%;
+  /* height: calc(100% - 2rem); */
+  height: 100%;
+  padding: 8px;
+  display: block;
+}
+
+.restrictedArea {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: block;
+}
+.restrictedArea:hover {
+  cursor: auto;
+}
+
+.paneContainer {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+
+}
+
+.paneContainer.pane{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
