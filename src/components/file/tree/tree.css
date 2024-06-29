@@ -1,6 +1,6 @@
 /* TODO:
- * 루트 트리 / 비단말(폴더) 트리 / 단말 (파일) 트리
- * root: .tree-root / temrinal: .tree-terminal / non-terminal: .tree-non-terminal
+* 루트 트리 / 비단말(폴더) 트리 / 단말 (파일) 트리
+* root: .tree-root / temrinal: .tree-terminal / non-terminal: .tree-non-terminal
 */
 
 /* wrapping tree */
@@ -98,5 +98,5 @@ ul {
 
 ul li label.file-tree--toggle {
   cursor: pointer;
-
+  
 }

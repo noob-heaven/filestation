@@ -44,12 +44,8 @@ export default function MovableWindowContainer({
     // HACK: 왼쪽 / 오른쪽 / 위 / 아래 4px 이내로 마우스가 들어오는경우, gap 을 두어 느린 랜더링을 방지.
     const gap = currentAction === 'scale' ? TRICKY_CONSTANT.TRICKY_COLLISION_SCALING_GAP : TRICKY_CONSTANT.TRICKY_COLLISION_NORMAL_GAP;
     const isColliding= (
-      (
-        e.clientX <= (boundary.left + gap) || e.clientX >= (boundary.right - gap)
-      )
-      || (
-          e.clientY <= (boundary.top + gap) || e.clientY >= (boundary.bottom - gap)
-      )
+      (e.clientX <= (boundary.left + gap) || e.clientX >= (boundary.right - gap))
+      || (e.clientY <= (boundary.top + gap) || e.clientY >= (boundary.bottom - gap))
     );
     setScalable(isColliding);
   };
