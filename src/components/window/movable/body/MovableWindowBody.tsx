@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from  './movableWindowBody.module.css';
 import TRICKY_CONSTANT from '@constants/tricky.constant';
+import MovableWindowLeftPane from '../left-pane/MovableWindowLeftPane';
+import MovableWindowRightPane from '../right-pane/MovableWindowRightPane';
 
 export default function MovableWindowBody() {
 
@@ -17,7 +19,6 @@ export default function MovableWindowBody() {
       )
     );
     if (isColliding) return;
-    console.log('stopPropagation');
     e.stopPropagation();
     e.preventDefault();
   };
@@ -34,7 +35,14 @@ export default function MovableWindowBody() {
         onMouseMoveCapture={stopPropagation}
         onMouseDownCapture={stopPropagation}
       >
-        ????
+        <div id="paneContainer" className={styles.paneContainer}>
+          <div id="leftPane" className={`${styles.paneContainer} ${styles.pane}`}>
+            <MovableWindowLeftPane  />
+          </div>
+          <div id="rightPane" className={`${styles.paneContainer} ${styles.pane}`}>
+            <MovableWindowRightPane />
+          </div>
+        </div>
       </div>
   </div>
   )

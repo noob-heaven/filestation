@@ -18,7 +18,7 @@
       }
     ],
     "paths": {
-      "@types/*": ["./src/common/@types/*"],
+      "$types/*": ["./src/common/@types/*"],
       "@app/*": ["./src/app/*"],
       "@lib/*": ["./src/lib/*"],
       "@components/*": ["./src/components/*"],
