@@ -23,6 +23,10 @@ export interface ITreeData {
   path: string,
   /** 이름 */
   name: string,
+
+  // NOTE: 메모이징의 핵심으로 쓰일거임, 그리고 랜더링상의 이점을 얻기위해, visibillity 가 아닌 display: none 으로 갈거임
+  /** 이하 노드가 펼쳐져 있는지! */
+  isOpen: boolean,
   
   metadata?: NodeMetaData,
   

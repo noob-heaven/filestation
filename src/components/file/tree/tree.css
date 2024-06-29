@@ -10,7 +10,7 @@ ul, .tree-wrapper {
   margin: 0;
 }
 
-input[type="checkbox"], .caret {
+input[type="checkbox"].caret {
   content: " ";
   cursor: pointer;
   width: 1.15em;
@@ -20,7 +20,7 @@ input[type="checkbox"], .caret {
   margin: 0;
 }
 /* NOTE: 의사 클래스 선택자 활용 하기 */
-.caret, input[type="checkbox"]::before {
+input[type="checkbox"].caret::before {
   content: "\25B6";
   color: black;
   display: inline-block;
@@ -28,10 +28,9 @@ input[type="checkbox"], .caret {
 }
 
 /* NOTE: 의사 클래스 선택자 활용 하기 */
-.caret, input[type="checkbox"]:checked::before {
+input[type="checkbox"].caret:checked::before {
   transform: rotate(90deg);
 }
-/* INFO: Caret -> Selectable */
 
 
 .tree-node {

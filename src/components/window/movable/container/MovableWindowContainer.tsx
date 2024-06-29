@@ -64,7 +64,7 @@ export default function MovableWindowContainer({
         top: position.top,
         width: size.width,
         height: size.height,
-        background: isSelected ? 'red' : 'blue',
+        background: isSelected ? 'red' : '#fff',
         cursor: isScalable ? 'nwse-resize' : 'move',
       }}
     >

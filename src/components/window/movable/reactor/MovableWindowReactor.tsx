@@ -69,6 +69,7 @@ export default function MovableWindowReactor() {
         const checkingRight = nextLeft + size.width;
         const checkingBottom = nextTop + size.height;
 
+
         // INFO: LEFT / RIGHT / TOP / BOTTOM에 대한 제약사항.
         if (
           nextLeft < RESTRICT_MOVE_X_MIN_GAP
@@ -76,7 +77,7 @@ export default function MovableWindowReactor() {
           || checkingRight > window.innerWidth - RESTRICT_MOVE_X_MAX_GAP
           || checkingBottom > window.innerHeight - RESTRICT_MOVE_Y_MIN_GAP
         ) return prev;
-
+        
         return { left: nextLeft, top: nextTop };
       });
     }

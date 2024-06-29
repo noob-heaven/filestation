@@ -6,9 +6,5 @@
  * @param filter 어떤 문자를 세고싶은지
  */
 export function stringCount(value: string, filter: string): number {
-  const regex: RegExp = new RegExp(`/${filter}/`, 'g');
-  const matchResult = value.match(regex);
-  return matchResult
-    ? matchResult.filter((x) => x !== '').length
-    : 0;
+  return value.split(filter).length - 1;
 }

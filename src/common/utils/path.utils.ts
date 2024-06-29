@@ -6,12 +6,18 @@ import { stringCount } from './string.util';
  */
 export function getDepth(isDir: boolean, path: string): number {
   // 디렉토리일경우
+  
+  let depth = 0;
   if (isDir) {
-    return path.endsWith('/')
+    depth = path.endsWith('/')
       ? stringCount(path.substring(0, path.length - 1), '/')
       : stringCount(path, '/'); 
+  // 파일일경우
+  } else {
+    depth = stringCount(path, '/');
   }
   
-  // 파일일경우
-  return stringCount(path, '/');
+  console.log(`[${isDir ? 'DIR' : 'FILE'}] -> ${path} => DEPTH: ${depth}`);
+  
+  return depth;
 }

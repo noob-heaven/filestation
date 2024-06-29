@@ -13,6 +13,9 @@
   height: 28px;
   overflow: hidden;
 }
+.terminalLi li {
+  content: " ";
+}
 
 .nonTerminalLi {
   display: table;
