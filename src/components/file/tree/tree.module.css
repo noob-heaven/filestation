@@ -1,0 +1,8 @@
+.root {
+  display: table;
+  width: 100%;
+  line-height: 28px;
+  height: 28px;
+  overflow: hidden;
+}
+
