@@ -1,0 +1,14 @@
+.simpleButtonWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.defaultButtonStyle {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  width: 4rem;
+  display: inline-block;
+}
+

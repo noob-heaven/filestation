@@ -1,18 +1,25 @@
 :root {
+  /* Background */
   --default-bg: #f5f5f5;
   --window-bg: #f3f3f3;
   --depth-1-bg: #f5f5f5;
 
 
+  /* Font */
   --font-default: "Mabry Pro", "Gotham Bold", "Spline Sans", "Helvetica Neue", "Google Sans", "Work Sans", Arial, sans-serif;
   --font-clear--family: "Iosevka Term Web", --system-ui, --apple-system, sans-serif;
   --font-clear--weight: 400;
   --font-clear--size: 0.75rem;
-  --font-title: "Monocraft", "Mabry Pro", "Gotham Bold", "Spline Sans", "Helvetica Neue", "Google Sans", "Work Sans", Arial, sans-serif;
-  --font-button: "Monocraft", "Mabry Pro", "Gotham Bold", "Spline Sans", "Helvetica Neue", "Google Sans", "Work Sans", Arial, sans-serif;
-
+  --font-title--family: "Monocraft", "Mabry Pro", "Gotham Bold", "Spline Sans", "Helvetica Neue", "Google Sans", "Work Sans", Arial, sans-serif;
+  --font-button--family: "Monocraft", "Mabry Pro", "Gotham Bold", "Spline Sans", "Helvetica Neue", "Google Sans", "Work Sans", Arial, sans-serif;
   --forground-rgb: 0, 0, 0;
 
+  /* Button */
+  --button-normal--text: #ffffff;
+  --button-normal--bg: #007bff;
+  --button-normal--border: #007bff;
+
+  /* Border */
   --weak-border-color: #d9d9d9; /* 약한 테두리 */
   --strong-border-color: #313131; /* 강한 테두리 */
 
@@ -79,8 +86,17 @@ a {
 
 /* NOTE: Unselectable */
 
+/* NOTE: Global Button Styling */
 
-.G-buttonDefault {
-  background-color: --var(--button-default-bg);
-  font-family: var(--font-button);
+button, input[type="button"] {
+  font-family: var(--font-button--family);
+  font-weight: 500;
+  color: var(--button-normal--text);
+  background-color: var(--button-normal--bg);
+  border: 1px solid var(--button-normal--border);
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }
+
+/* NOTE: Global Button Styling */

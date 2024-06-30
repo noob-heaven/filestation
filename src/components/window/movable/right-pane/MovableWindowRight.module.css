@@ -25,8 +25,8 @@
 }
 
 .topBarButton {
-  width: 5em;
   margin-top: 0.2rem;
   margin-bottom: 0.2rem;
+  width: 4rem;
   display: inline-block;
 }
