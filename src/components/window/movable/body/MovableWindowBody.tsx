@@ -1,8 +1,11 @@
 import React from 'react';
-import styles from  './movableWindowBody.module.css';
+
 import TRICKY_CONSTANT from '@constants/tricky.constant';
+
 import MovableWindowLeftPane from '../left-pane/MovableWindowLeftPane';
 import MovableWindowRightPane from '../right-pane/MovableWindowRightPane';
+
+import styles from './style.module.css';
 
 export default function MovableWindowBody() {
 

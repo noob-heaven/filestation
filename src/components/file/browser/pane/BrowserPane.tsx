@@ -2,7 +2,7 @@ import React from 'react';
 
 import { RiFolderFill } from '@remixicon/react';
 
-import styles from './browserPane.module.css';
+import styles from './style.module.css';
 
 export default function BrowserPane() {
   return (
