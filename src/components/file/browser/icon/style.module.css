@@ -1,0 +1,24 @@
+.folderContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  width: 100%;
+  height: 100%;
+}
+
+.folderIconWrapper {
+  width: 4em;
+  height: calc(100% - 2.2em)
+}
+
+.folderNameWrapper {
+  height: 2em;
+}
+
+.folderName {
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-align: center;
+}

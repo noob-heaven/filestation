@@ -4,7 +4,7 @@ import MemoizedSimpleDefaultButton from '@components/button/simple/SimpleDefault
 
 import styles from './style.module.css';
 
-export default function TopBar() {
+export default function TitleBar() {
   const onClickWhat = (e: React.MouseEvent<HTMLButtonElement>) => {
     console.log('what');
   }
