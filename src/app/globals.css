@@ -12,7 +12,7 @@
   --font-clear--size: 0.75rem;
   --font-title--family: "Monocraft", "Mabry Pro", "Gotham Bold", "Spline Sans", "Helvetica Neue", "Google Sans", "Work Sans", Arial, sans-serif;
   --font-button--family: "Monocraft", "Mabry Pro", "Gotham Bold", "Spline Sans", "Helvetica Neue", "Google Sans", "Work Sans", Arial, sans-serif;
-  --forground-rgb: 0, 0, 0;
+  --foreground-rgb: 0, 0, 0;
 
   /* Button */
   --button-normal--text: #ffffff;
