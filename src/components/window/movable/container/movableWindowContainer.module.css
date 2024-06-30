@@ -1,13 +1,18 @@
 
 .movableWindowContainer {
-  position: absolute;
   z-index: 1000;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  background-color: var(--window-bg);
+
+  position: absolute;
   width: 6.25rem;
   height: 6.25rem;
+
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  overflow: hidden; /* WARN: Must be hidden ( 삐져나오는 부분 숨겨야댐!) */
 }
 
 /* On Hover, Cursor -> Move */

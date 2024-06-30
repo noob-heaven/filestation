@@ -1,9 +1,13 @@
 .leftPaneStyle {
-  background-color: #ffffff;
+  background-color: var(--depth-1-bg);
+  color: #000;
+
   width: 100%;
   height: 100%;
-  color: #000;
+
   margin-right: 2px;
-  border: 0.1rem #313131 solid;
   padding: 0.3rem;
+
+  border-radius: 0.3rem;
+  border: 0.1rem #313131 solid;
 }
