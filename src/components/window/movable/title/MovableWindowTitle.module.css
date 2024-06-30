@@ -8,13 +8,16 @@
   padding-left: 8px;
   padding-right: 8px;
   background-color: #fff;
+  border-bottom: 1px solid var(--weak-border-color);
   color: #000;
 }
 
 .titleItem {
+  font-family: var(--font-title--family);
+  letter-spacing: 0.05em;
 }
 
 .titleItem.title {
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 0.8rem;
+  font-weight: 500;
 }

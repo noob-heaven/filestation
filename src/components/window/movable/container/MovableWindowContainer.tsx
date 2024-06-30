@@ -8,7 +8,7 @@ import styles from './movableWindowContainer.module.css';
 import { debug } from '@common/utils/debug';
 import MovableWindowBody from '../body/MovableWindowBody';
 
-const temporaryTitle = 'Temporary Title';
+const temporaryTitle = 'Unidentified Object Explorer';
 
 export default function MovableWindowContainer({
   currentAction,

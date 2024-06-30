@@ -77,7 +77,7 @@ export default function MovableWindowReactor() {
           || checkingRight > window.innerWidth - RESTRICT_MOVE_X_MAX_GAP
           || checkingBottom > window.innerHeight - RESTRICT_MOVE_Y_MIN_GAP
         ) return prev;
-        
+
         return { left: nextLeft, top: nextTop };
       });
     }
@@ -97,7 +97,7 @@ export default function MovableWindowReactor() {
       onMouseUp={cleanUpState}
     >
 
-      { isInitialized &&
+      {isInitialized &&
         <MovableWindowContainer
           currentAction={currentAction}
           isSelected={isSelected}
@@ -108,7 +108,7 @@ export default function MovableWindowReactor() {
 
           position={position}
           size={size}
-        /> 
+        />
       }
     </div>
   );
