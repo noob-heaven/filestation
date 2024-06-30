@@ -8,12 +8,9 @@ export default function MovableWindowRightPane() {
   return (
     <div className={styles.rightPaneStyle}>
       <div className={styles.topBarStyle}>
-        <SimpleDefaultButton text="TEXT"/>
-        <div className={styles.topBarButtonWrapper}>
-          <button className={styles.topBarButton}>X</button>
-        </div>
+        <SimpleDefaultButton>TEXT</SimpleDefaultButton>
+        <SimpleDefaultButton>TEXT</SimpleDefaultButton>
       </div>
-
     </div>
   )
 }
