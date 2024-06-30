@@ -4,3 +4,29 @@
   height: 100%;
   border: 0.1rem #313131 solid;
 }
+
+.topBarStyle {
+  width: 100%;
+  background-color: #313131;
+  height: 2.5em;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.topBarButtonWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.topBarButton {
+  width: 5em;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  display: inline-block;
+}

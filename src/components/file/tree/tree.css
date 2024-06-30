@@ -99,3 +99,7 @@ ul li label.file-tree--toggle {
   cursor: pointer;
   
 }
+
+.file-tree {
+  font-weight: 500;
+}
