@@ -1,15 +1,16 @@
 import React from 'react';
 
-import styles from './style.module.css';
-import TopBar from './top/TopBar';
+import TitleBar from './title/TitleBar';
 import BodyContainer from './body/BodyContainer';
+import styles from './style.module.css';
 
 export default function MovableWindowRightPane() {
   return (
     <div className={styles.rightPane}>
-      <TopBar />
+      <div>
+        <TitleBar />
+      </div>
       <BodyContainer />
-      
     </div>
   )
 }
