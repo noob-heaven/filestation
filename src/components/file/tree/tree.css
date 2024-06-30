@@ -4,7 +4,8 @@
 */
 
 /* wrapping tree */
-ul, .tree-wrapper {
+ul,
+.tree-wrapper {
   list-style-type: none;
   padding-left: 0;
   margin: 0;
@@ -16,9 +17,10 @@ input[type="checkbox"].caret {
   width: 1.15em;
   height: 1.15em;
   appearance: none;
-  background-color: #fff;
+  background-color: var(--depth-1-bg);
   margin: 0;
 }
+
 /* NOTE: 의사 클래스 선택자 활용 하기 */
 input[type="checkbox"].caret::before {
   content: "\25B6";
@@ -33,8 +35,7 @@ input[type="checkbox"].caret:checked::before {
 }
 
 
-.tree-node {
-}
+.tree-node {}
 
 .tree-wrapper ul {
   padding-left: 0.25em;
@@ -82,7 +83,7 @@ ul label {
   left: 0;
 }
 
-.tree-non-terminal--collapsed > ul {
+.tree-non-terminal--collapsed>ul {
   display: none;
 }
 
@@ -97,9 +98,11 @@ ul {
 
 ul li label.file-tree--toggle {
   cursor: pointer;
-  
+
 }
 
 .file-tree {
-  font-weight: 500;
+  font-family: var(--font-clear--family);
+  font-weight: var(--font-clear--weight);
+  font-size: var(--font-clear--size);
 }

@@ -1,9 +1,20 @@
 :root {
-  --max-width: 1100px;
-  --border-radius: 12px;
+  --default-bg: #f5f5f5;
+  --window-bg: #f3f3f3;
+  --depth-1-bg: #f5f5f5;
+
+
   --font-default: "Mabry Pro", "Gotham Bold", "Spline Sans", "Helvetica Neue", "Google Sans", "Work Sans", Arial, sans-serif;
+  --font-clear--family: "Iosevka Term Web", --system-ui, --apple-system, sans-serif;
+  --font-clear--weight: 400;
+  --font-clear--size: 0.75rem;
   --font-title: "Monocraft", "Mabry Pro", "Gotham Bold", "Spline Sans", "Helvetica Neue", "Google Sans", "Work Sans", Arial, sans-serif;
   --font-button: "Monocraft", "Mabry Pro", "Gotham Bold", "Spline Sans", "Helvetica Neue", "Google Sans", "Work Sans", Arial, sans-serif;
+
+  --forground-rgb: 0, 0, 0;
+
+  --weak-border-color: #d9d9d9; /* 약한 테두리 */
+  --strong-border-color: #313131; /* 강한 테두리 */
 
 }
 
@@ -25,12 +36,6 @@ body {
 
   color: rgb(var(--foreground-rgb));
   font-family: var(--font-default);
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
 
 a {
@@ -41,6 +46,12 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
   }
 }
 
