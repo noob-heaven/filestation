@@ -12,6 +12,7 @@
     "major": "clear;printf \"\n\n\n\";npm version major --no-git-tag-version;"
   },
   "dependencies": {
+    "@remixicon/react": "^4.2.0",
     "next": "14.2.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

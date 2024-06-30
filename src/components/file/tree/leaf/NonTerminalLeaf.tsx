@@ -1,13 +1,13 @@
 import React, { memo, useState } from 'react';
 
-import styles from './tree.module.css';
 import { getDepth } from '@common/utils/path.utils';
 import { simpleHash } from '@common/utils/hash.utils';
 
-import { ITreeData } from './@types/tree.data';
+import { ITreeData } from '@components/file/@types/tree.data';
 import ConditionalNonTerminalSelector from './ConditionalNonTerminalSelector';
-import MemoizedSpacer from './Spacer';
-import { ITreeProps } from './@types/tree.props';
+
+import MemoizedSpacer from '../utillity/Spacer';
+import styles from '../tree.module.css';
 
 // NOTE: 논터미널 -> 단말 노드를 가지고 있는것들임 <li>해당 리프 내용물 inside: <ul>{내용물}</ul> </li> 로 해줘야함
 export function NonTerminalLeaf(props: ITreeData) {

@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import type { IMovableWindowProps } from './@types/movableWindow.props';
+import React, { useEffect } from 'react';
 
 import TRICKY_CONSTANT from '@constants/tricky.constant';
-import MovableWindowTitle from '../title/MovableWindowTitle';
-
-import styles from './movableWindowContainer.module.css';
 import { debug } from '@common/utils/debug';
+
 import MovableWindowBody from '../body/MovableWindowBody';
+import MovableWindowTitle from '../title/MovableWindowTitle';
+import styles from './movableWindowContainer.module.css';
+import type { IMovableWindowProps } from './@types/movableWindow.props';
 
 const temporaryTitle = 'Unidentified Object Explorer';
 

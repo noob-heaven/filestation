@@ -1,4 +1,4 @@
-import { ITreeData } from "@components/file/tree/@types/tree.data";
+import { ITreeData } from "@components/file/@types/tree.data";
 
 export const TEST_TREE: ITreeData = {
   isLeaf: false,

@@ -1,5 +1,6 @@
-import { ITreeData } from "./tree.data";
 import React from 'react';
+
+import { ITreeData } from "@components/tree/@types/tree.data";
 
 export interface ITreeProps {
   data: ITreeData,
