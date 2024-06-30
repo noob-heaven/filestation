@@ -1,7 +1,8 @@
 import React from 'react';
 
+import MovableWindowReactor from '@components/window/movable/reactor/MovableWindowReactor';
+
 import styles from "./page.module.css";
-import MovableWindowReactor from '@src/components/window/movable/reactor/MovableWindowReactor';
 
 export default function Home() {
 

@@ -1,11 +1,10 @@
 import React from 'react';
 
 import { simpleHash } from '@common/utils/hash.utils';
+import { ITreeData } from '@components/file/@types/tree.data';
 
-import { ITreeData } from './@types/tree.data';
 import NonTerminalLeaf from './NonTerminalLeaf';
 import TerminalLeaf from './TerminalLeaf';
-
 
 /** 여기는 Children 목록에 대하여 반복하며 분기 -> NonTerminal / Terminal 노드를 반환 */
 export default function ConditionalNonTerminalSelector({ datas }: { datas: ITreeData[] }): React.ReactElement {
