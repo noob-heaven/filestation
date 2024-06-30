@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 
 import { IButtonProps } from '../@types/button.props';
 
-import styles from './simpleButton.module.css';
+import styles from './style.module.css';
 
 // TODO: props 줘야댐
 export function SimpleDefaultButton({

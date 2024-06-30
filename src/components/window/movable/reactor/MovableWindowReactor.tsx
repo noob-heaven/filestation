@@ -21,7 +21,7 @@ import {
 } from '@constants/common.constants';
 
 import { MovableWindowAction } from '../container/@types/movableWindow.props';
-import styles from './movableWindowReactor.module.css';
+import styles from './style.module.css';
 
 export default function MovableWindowReactor() {
 
